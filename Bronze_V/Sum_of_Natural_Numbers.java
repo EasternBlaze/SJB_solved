@@ -3,8 +3,10 @@ class Main{
         Scanner scan= new Scanner(System.in);
         int n = scan.nextInt();
         int sum = 0;
-        for (int counter = 1; counter <= n; counter++)
+        int counter = 1;
+        for ( counter <= n; counter++){
             sum += counter
+        }
         System.out.println(sum);
     }
 }
