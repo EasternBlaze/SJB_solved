@@ -1,0 +1,20 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+    String input = read.readLine();
+    String inputArr[] = input.split(" ");
+    int a = Integer.parseInt(inputArr[0]); 
+    int b = Integer.parseInt(inputArr[1]);
+    int calc = a - b; 
+    if(calc > 0){
+      System.out.println(">");
+    }else if(calc == 0){
+      System.out.println("==");
+    }else if(calc < 0){
+      System.out.println("<");
+    }
+  }
+}
