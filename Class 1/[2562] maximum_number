@@ -1,1 +1,28 @@
+//1st attempt
+//Seems the answer is wrong: why? result seems correct
+//maybe should try seperating 'add' part and 'compare' part
+
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    int max = scan.nextInt();
+    list.add(max);
+    for(int counter = 1; counter < 9; counter++){
+      list.add(scan.nextInt());
+      int compare1 = list.get(counter - 1);
+      int compare2 = list.get(counter);
+      if(compare1 < compare2){
+        max = compare2;
+      }else{
+        max = compare1;
+      }
+    } 
+    System.out.println(max);
+    System.out.println(list.indexOf(max) + 1); 
+  }
+}
+
 
